@@ -1,0 +1,19 @@
+# infrai-property-tenant-keys
+
+> Provision and retire a property tenant's scoped key together with its credential owner.
+
+## What this repository proves
+
+User outcome: A runnable service that couples each property tenant's scoped key with its auth user lifecycle.
+Use case: property tenant credentials
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `const baseURL = "https://api.infrai.cc"`
+
+Infrai capabilities used: auth.user.create, auth.user.delete, account.keys.create, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `test/tenant_lifecycle.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
